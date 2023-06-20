@@ -1,26 +1,14 @@
-#include "phone.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include "sum.h"
+#include <math.h>
 
-struct Contact PhoneBook[MAX];
-int size = 0;
-
-int main() {
-	int service;
-	do
-	{
-		printf("============ Telephone Book Management ============\n");
-                printf(" <<<1. Register\t 2. Print All \t 3. Search by Name \t 4. Delete \t 5. Exit >>>\n");
-                printf("Please enter your service number (1-5): ");
-                scanf("%d", &service);
-
-		switch (service)
-		{
-		case 1: registerPhoneData(); break;
-		case 2: printAll(); break;
-		case 3: searchByName(); break;
-		case 4: deleteByName(); break;
-		}
-	} while (service != 5);
-	return 0;
-}	
+int main(int argc, char *argv[]){
+	int c;
+	c = sum(1, 2);
+	printf("The sum of 1 and 2 is %d\n", c);
+	printf("sqrt(2) is %lf\n", sqrt(2));
+	return 1;
+}
 
 
